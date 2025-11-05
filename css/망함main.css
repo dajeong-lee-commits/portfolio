@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(font.css);
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background: #111b29;
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 99px;
+  text-align: center;
+}
+
+div {
+  position: absolute;
+}
+
+#main {
+  position: fixed;
+  background: #fff;
+  inset: 0;
+  height: 100vh;
+}
+
+
+.scrollDist {
+  width: 100%;
+  height: 200%;
+}
+.sky {
+  width: 100%; /* 브라우저 뷰포트 가로 전체 */
+  height: auto; /* 원본 비율 유지 */
+  x: 0; /* SVG 좌표 기준 왼쪽 정렬 */
+  y: 0;
+}
+
+.cloud {
+  filter:brightness(0.5);
+}
+
+rect {
+  display: none;
+} 
+.section-01 {
+  background-color: aqua;
+}
