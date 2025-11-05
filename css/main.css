@@ -1,10 +1,68 @@
-@charset "utf-8";
 @import url(reset.css);
 @import url(font.css);
+html, body {
+  font-size: 20px;
+  line-height: 1.5;
+}
 
-section .inner{
+section .inner {
   max-width: 1200px;
   width: calc(100% - 80px);
   margin: 0 auto;
-  background-color: antiquewhite;
+  /*  background-color: antiquewhite; */
 }
+
+.section-01 .inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 127px;
+  padding: 290px 0;
+}
+.section-01 .inner .image {
+  width: 380px;
+  height: 499px;
+}
+.section-01 .inner .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  display: block;
+}
+.section-01 .inner .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 688px;
+}
+.section-01 .inner .list .item {
+  width: 282px;
+}
+.section-01 .inner .list .item h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.section-01 .inner .list .item ul li {
+  margin-top: 5px;
+}
+.section-01 .inner .list .item .Skill_list {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+}
+.section-01 .inner .list .item .Skill_list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-01 .inner .list .item .Skill_list li img {
+  width: 36px;
+  height: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=main.css.map */
