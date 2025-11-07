@@ -2,7 +2,7 @@
 @import url(font.css);
 html,
 body {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -13,32 +13,54 @@ section .inner {
   /*  background-color: antiquewhite; */
 }
 
+#header {
+  width: 100%;
+  color: white;
+  height: 80px;
+  background-color: black;
+  position: fixed;
+  z-index: 99;
+}
+#header .inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header .inner .gnb {
+  display: flex;
+  gap: 60px;
+}
 .section-01 .inner {
   display: flex;
   align-items: center;
-  gap: 126px;
   padding: 300px 0;
+  gap: 10.5%;
 }
 .section-01 .inner .image {
-  width: 282px;
-  height: 372px;
+  width: 23.5%;
+  height: 371px;
 }
 .section-01 .inner .image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  height: 100%;
   display: block;
 }
 .section-01 .inner .list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 688px;
-  gap: 56px;
+  width: 59.5%;
+  row-gap: 50px;
 }
 .section-01 .inner .list .item {
-  width: 282px;
+  max-width: 306px;
+  width: 42.85%;
 }
 .section-01 .inner .list .item h3 {
   margin-bottom: 10px;
@@ -68,13 +90,12 @@ section .inner {
 
 .section .inner {
   padding: 0 0 300px;
-  display: flex;
-  flex-direction: column;
 }
 .section .inner .cat_wrap {
   display: flex;
+  justify-content: center;
   gap: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .section .inner .cat_wrap li a {
   font-size: 16px;
@@ -82,6 +103,7 @@ section .inner {
   padding: 4px 16px;
   border: 1px solid black;
   border-radius: 50px;
+  white-space: nowrap;
   font-size: 14px;
 }
 .section .inner .cat_wrap li a:hover {
@@ -90,50 +112,137 @@ section .inner {
   background-color: black;
   transition: 0.3s;
 }
-.section .inner .item {
+.section .inner .list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.section .inner .list .item {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  padding: 85px 0 0 0;
+  gap: 20px;
 }
-.section .inner .item .image {
-  width: 486px;
+.section .inner .list .item .item-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  white-space: nowrap;
 }
-.section .inner .item .image img {
+.section .inner .list .item .item-left {
+  width: 64.33%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section .inner .list .item .item-left .image {
+  display: flex;
+  justify-content: center;
+  padding: 30px 30px 50px;
+  width: 100%;
+  border: 1px solid #333333;
+  border-radius: 36px;
+}
+.section .inner .list .item .item-left .image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.section .inner .item .contents_wrap {
-  width: 486px;
+.section .inner .list .item .item-left .tool {
+  padding: 30px;
+  border: 1px solid #333333;
+  border-radius: 36px;
+  display: flex;
+  gap: 36px;
 }
-.section .inner .item .contents_wrap .project_info {
+.section .inner .list .item .item-left .tool li {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 5px;
 }
-.section .inner .item .contents_wrap .project_info li {
-  display: flex;
-  gap: 24px;
-}
-.section .inner .item .contents_wrap .project_info li strong {
-  width: 78px;
-}
-.section .inner .item .contents_wrap > p {
-  margin: 30px 0;
-  font-size: 16px;
-}
-.section .inner .item .contents_wrap .link_wrap {
-  display: flex;
-  gap: 24px;
-}
-.section .inner .item .contents_wrap .link_wrap li a {
-  font-size: 16px;
+.section .inner .list .item .item-left .tool li img {
+  width: 36px;
+  height: 36px;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
-  padding: 4px 16px;
-  border: 1px solid black;
-  border-radius: 50px;
 }
-.section .inner .item .contents_wrap .link_wrap li a:hover {
+.section .inner .list .item .item-left .tool li span {
+  font-size: 14px;
+  display: block;
+}
+.section .inner .list .item .item-right {
+  width: 34%;
+  padding: 30px;
+  border: 1px solid #333333;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.section .inner .list .item .item-right .project_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.section .inner .list .item .item-right .QR {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 23.47%;
+  margin: 0 30px 30px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section .inner .list .item .item-right .link_wrap {
+  display: flex;
+  flex-direction: column;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 10px;
+}
+.section .inner .list .item .item-right .link_wrap li a {
+  width: 160px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 34px;
+}
+.section .inner .list .item .item-right .link_wrap li a:hover {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.section-02 .web_renewal {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.section-03 .app_renewal {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  transition: 0.3s;
+}
+
+.section-04 .clone_coding {
   color: white;
   border: 1px solid black;
   background-color: black;
