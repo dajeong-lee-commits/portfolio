@@ -4,12 +4,32 @@
 
 @mixin imgBox {
   width: 100%;
-  height: 100%;
+
   object-fit: cover;
   display: block;
-
 }
-html, body {
+@mixin btnStyle {
+  font-size: 16px;
+  display: block;
+  padding: 4px 16px;
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+@mixin btnHover {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  transition: 0.3s;
+}
+@mixin btnClicked {
+  color: white;
+  border: 1px solid black;
+  background-color: black;
+  transition: 0.3s;
+}
+html,
+body {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -18,22 +38,20 @@ section .inner {
   max-width: 1200px;
   width: calc(100% - 80px);
   margin: 0 auto;
- /*  background-color: antiquewhite; */
+
+  /*  background-color: antiquewhite; */
 }
 
 .section-01 {
   .inner {
-    width: 100%;
     display: flex;
-
     align-items: center;
     gap: 126px;
-    padding: 290px 0;
+    padding: 300px 0;
 
     .image {
       width: 282px;
       height: 372px;
-      
 
       img {
         @include imgBox;
@@ -59,26 +77,91 @@ section .inner {
             margin-top: 4px;
           }
         }
-    
+
         .Skill_list {
           font-size: 12px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px 24px;
+          li {
             display: flex;
-            flex-wrap: wrap;
-            column-gap: 24px;
-            li {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              
-              img {
-                width: 36px;
-                height: 36px;
-                object-fit: cover;
-              }
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 36px;
+              height: 36px;
+              object-fit: cover;
             }
           }
-        
+        }
+      }
+    }
+  }
+}
+.section {
+  .inner {
+    padding : 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    .cat_wrap {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 50px;
+      li {
+        a {
+          @include btnStyle();
+          font-size: 14px;
+        }
+        a:hover {
+          @include btnHover();
+        }
+      }
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
 
+      .image {
+        width: 486px;
+
+        img {
+          @include imgBox();
+        }
+      }
+      .contents_wrap {
+        width: 486px;
+        .project_info {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          li {
+            display: flex;
+            gap: 24px;
+            strong {
+              width: 78px;
+            }
+            p {
+            }
+          }
+        }
+        > p {
+          margin: 30px 0;
+          font-size: 16px;
+        }
+        .link_wrap {
+          display: flex;
+          gap: 24px;
+
+          li {
+            a {
+              @include btnStyle();
+            }
+            a:hover {
+              @include btnHover();
+            }
+          }
+        }
       }
     }
   }
