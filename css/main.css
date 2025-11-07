@@ -1,7 +1,9 @@
+@charset "UTF-8";
 @import url(reset.css);
 @import url(font.css);
 html,
 body {
+  font-family: "pretendard";
   font-size: 16px;
   line-height: 1.5;
 }
@@ -16,7 +18,7 @@ section .inner {
 #header {
   width: 100%;
   color: white;
-  height: 80px;
+  height: 70px;
   background-color: black;
   position: fixed;
   z-index: 99;
@@ -30,6 +32,7 @@ section .inner {
   align-items: center;
 }
 #header .inner .gnb {
+  font-size: 18px;
   display: flex;
   gap: 60px;
 }
@@ -115,7 +118,7 @@ section .inner {
 .section .inner .list {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 150px;
 }
 .section .inner .list .item {
   display: flex;
@@ -193,6 +196,9 @@ section .inner {
   flex-direction: column;
   gap: 20px;
 }
+.section .inner .list .item .item-right .project_info li p {
+  line-height: 1.5;
+}
 .section .inner .list .item .item-right .QR {
   display: block;
   position: absolute;
@@ -206,13 +212,11 @@ section .inner {
 .section .inner .list .item .item-right .link_wrap {
   display: flex;
   flex-direction: column;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
   row-gap: 10px;
 }
 .section .inner .list .item .item-right .link_wrap li a {
   width: 160px;
-  height: 34px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -247,4 +251,196 @@ section .inner {
   border: 1px solid black;
   background-color: black;
   transition: 0.3s;
+}
+
+@media screen and (min-width: 961px) and (max-width: 1023px) {
+  #header {
+    height: 60px;
+  }
+  #header .inner {
+    padding: 0 40px;
+  }
+  #header .inner .gnb {
+    font-size: 16px;
+    gap: 40px;
+  }
+  .section .inner {
+    padding: 0 0 200px;
+  }
+  .section .inner .cat_wrap {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .section .inner .list {
+    gap: 100px;
+  }
+  .section .inner .list .item {
+    padding: 72px 0 0 0;
+    gap: 16px;
+  }
+  .section .inner .list .item .item-title {
+    font-size: 28px;
+  }
+  .section .inner .list .item .item-left {
+    width: 61.86%;
+    gap: 16px;
+  }
+  .section .inner .list .item .item-left .image {
+    padding: 24px;
+    border-radius: 24px;
+  }
+  .section .inner .list .item .item-left .tool {
+    padding: 24px;
+    border-radius: 24px;
+    gap: 24px;
+  }
+  .section .inner .list .item .item-left .tool li {
+    gap: 2px;
+  }
+  .section .inner .list .item .item-left .tool li img {
+    /*                   width: 36px;
+    height: 36px; 
+    보고 24로 변경*/
+  }
+  .section .inner .list .item .item-left .tool li span {
+    /* font-size: 14px; 보고 12px로 변경*/
+  }
+  .section .inner .list .item .item-right {
+    width: 36.44%;
+    padding: 24px;
+    border-radius: 24px;
+  }
+  .section .inner .list .item .item-right .project_info {
+    gap: 16px;
+  }
+  .section .inner .list .item .item-right .project_info p {
+    font-size: 15px;
+  }
+  .section .inner .list .item .item-right .QR {
+    width: 31.97%;
+    margin: 0 24px 24px 0;
+  }
+  .section .inner .list .item .item-right .link_wrap {
+    row-gap: 10px;
+  }
+  .section .inner .list .item .item-right .link_wrap li a {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .section .inner .list .item .item-right .link_wrap li a:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 960px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+  section .inner {
+    width: calc(100% - 40px);
+  }
+  #header {
+    height: 60px;
+  }
+  #header .inner {
+    padding: 0 20px;
+  }
+  #header .inner .gnb {
+    font-size: 16px;
+    gap: 40px;
+  }
+  .section .inner {
+    padding: 0 0 100px;
+  }
+  .section .inner .cat_wrap {
+    width: 100%;
+    gap: 16px;
+    margin-bottom: 30px;
+    overflow-x: scroll;
+  }
+  .section .inner .list {
+    gap: 100px;
+  }
+  .section .inner .list .item {
+    flex-direction: column;
+    padding: 63px 0 0 0;
+    gap: 16px;
+  }
+  .section .inner .list .item .item-title {
+    font-size: 22px;
+  }
+  .section .inner .list .item .item-left {
+    width: 100%;
+    gap: 16px;
+    border: 1px solid #333333;
+    border-radius: 16px;
+  }
+  .section .inner .list .item .item-left .image {
+    padding: 16px;
+    border: none;
+    border-radius: 0;
+  }
+  .section .inner .list .item .item-left .tool {
+    padding: 16px;
+    border: none;
+    border-radius: 0;
+    gap: 16px;
+  }
+  .section .inner .list .item .item-left .tool li {
+    width: 8.35%;
+  }
+  .section .inner .list .item .item-left .tool li img {
+    width: 100%;
+    height: auto;
+  }
+  .section .inner .list .item .item-left .tool li span {
+    display: none;
+  }
+  .section .inner .list .item .item-right {
+    width: 100%;
+    padding: 0 0 46px;
+    border: none;
+    border-radius: 0;
+  }
+  .section .inner .list .item .item-right .project_info {
+    border: 1px solid #333333;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .section .inner .list .item .item-right .project_info p {
+    font-size: 14px;
+  }
+  .section .inner .list .item .item-right .QR {
+    top: 0;
+    bottom: auto;
+    width: 31.97%;
+    margin: 16px 16px 0 0;
+    width: 36px;
+    height: 36px;
+  }
+  .section .inner .list .item .item-right .link_wrap {
+    flex-direction: row;
+    row-gap: 0;
+    gap: 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .section .inner .list .item .item-right .link_wrap li a {
+    display: block;
+    width: 30%;
+    background-color: aqua;
+    height: 30px;
+    line-height: 30px;
+  }
+  .section .inner .list .item .item-right .link_wrap li a:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    transition: 0.3s;
+  }
 }/*# sourceMappingURL=main.css.map */
