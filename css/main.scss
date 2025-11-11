@@ -46,7 +46,7 @@ section .inner,
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 200px 0 0;
+  padding: 100px 0;
   margin: 0 auto;
 }
 
@@ -222,6 +222,9 @@ section .inner,
       }
 
       .tab_list {
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
         display: none;
 
         .item {
@@ -230,7 +233,6 @@ section .inner,
           position: relative;
           padding: 85px 0 0 0;
           gap: 20px;
-          margin-bottom: 150px;
 
           .item-title {
             width: 100%;
@@ -368,14 +370,13 @@ section .inner,
         }
       }
       .tab_list.active {
-        display: block;
+        display: flex;
       }
     }
   }
 
   .section-03 {
     .inner {
-      padding: 50px 0 200px;
       .app_renewal {
         @include btnClicked;
       }
@@ -392,7 +393,7 @@ section .inner,
   background-color: #000000;
   color: #eeeeee;
   .inner {
-    padding: 150px 0 50px;
+    padding: 100px 0 50px;
     .contents {
       display: flex;
       flex-direction: column;
@@ -432,6 +433,10 @@ section .inner,
   html,
   body {
   }
+  section .inner,
+  #footer .inner {
+  padding: 75px 0;
+  }
 
   .section_title {
     font-size: 30px;
@@ -464,12 +469,12 @@ section .inner,
       .inner {
         .visual_text {
           font-size: 100px;
-
         }
       }
     }
     .section-01 {
       .inner {
+     
         .section_title {
           margin-bottom: 50px;
         }
@@ -551,7 +556,6 @@ section .inner,
             .item {
               padding: 72px 0 0 0;
               gap: 16px;
-              margin-bottom: 100px;
 
               .item-title {
                 font-size: 28px;
@@ -627,13 +631,10 @@ section .inner,
         }
       }
     }
-    .section-03 .inner {
-      padding: 0 0 100px;
-    }
   }
   #footer {
     .inner {
-      padding: 100px 0 40px;
+      padding: 75px 0 50px;
       .contents {
         gap: 30px;
         address {
@@ -666,7 +667,7 @@ section .inner,
 
   section .inner {
     width: calc(100% - 40px);
-    padding: 120px 0 0;
+    padding: 60px 0;
   }
   .section_title {
     font-size: 30px;
@@ -789,7 +790,6 @@ section .inner,
               flex-direction: column;
               padding: 0;
               gap: 16px;
-              margin-bottom: 60px;
 
               .item-title {
                 position: static;
@@ -809,7 +809,6 @@ section .inner,
                   padding: 16px 16px 0;
                   border: none;
                   border-radius: 0;
-              
                 }
 
                 .tool {
@@ -841,7 +840,6 @@ section .inner,
                 padding: 0 0 42px;
                 border: none;
                 border-radius: 0;
-                
 
                 .project_info {
                   border: 1px solid #333333;
@@ -907,9 +905,7 @@ section .inner,
         }
       }
     }
-    .section-03 .inner {
-      padding: 60px 0 120px;
-    }
+
   }
   #footer {
     .inner {
