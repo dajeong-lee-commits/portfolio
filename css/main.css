@@ -72,10 +72,6 @@ section .inner,
   height: 100%;
   display: block;
 }
-#main .inner {
-  height: 100%;
-  padding: 0;
-}
 #main .inner .visual_text {
   height: 100%;
   font-size: 120px;
