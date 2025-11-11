@@ -1,17 +1,22 @@
-
+/* 
 window.onload = () => {
 
 
-};
+}; */
 
 $(function () {
-    $('html').animate({
-        scrollTop: $('#target-element').offset().top
-    }, 800);//화면 상단으로 부드럽게 넘어가기
+    $('.tab_menu li button').on('click', function (e) {
+        e.preventDefault();
 
-    $('.tab_menu li button').on, ('click', function () {
-        alert();
-    })
+        // 클릭한 버튼이 몇 번째 li인지
+        const index = $(this).parent().index();
 
+        // 메뉴 active 처리
+        $('.tab_menu li').removeClass('active');
+        $(this).parent().addClass('active');
 
-})
+        // 내용 active 처리
+        $('.section-02 .contents .tab_list').removeClass('active');
+        $('.section-02 .contents .tab_list').eq(index).addClass('active');
+    });
+});

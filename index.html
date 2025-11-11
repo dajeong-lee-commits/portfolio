@@ -8,26 +8,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<script src="js/main.JS"></script>
 <script src="../portfolio/lib/jquery-3.7.1.min.js"></script>
-<script>
-    $(function () {
-        $('.tab_menu li button').on('click', function (e) {
-            e.preventDefault();
+<script src="js/main.JS"></script>
 
-            // 클릭한 버튼이 몇 번째 li인지
-            const index = $(this).parent().index(); // 0,1,2...
-
-            // 메뉴 active 처리
-            $('.tab_menu li').removeClass('active');
-            $(this).parent().addClass('active');
-
-            // 내용 active 처리
-            $('.section-02 .contents .tab_list').removeClass('active');
-            $('.section-02 .contents .tab_list').eq(index).addClass('active');
-        });
-    });
-</script>
 
 <body>
     <header id="header">
@@ -389,6 +372,10 @@
                                     <li>
                                         <strong>참여도</strong>
                                         <p>퍼블리싱 100%</p>
+                                    </li>
+                                    <li>
+                                        <strong>Style</strong>
+                                        <p>모던한(Modern), 심플(Simple)</p>
                                     </li>
 
                                     <li>
