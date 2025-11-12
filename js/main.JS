@@ -78,10 +78,10 @@ $(function () {
     });
 
     // 오버레이 빈 영역 클릭 시 닫기 (한 번만 바인딩)
-    $lightbox.on('click touchstart', function (e) {
+    $lightbox.on('click', function (e) {
         if (e.target === this) closeLightbox();
     });
-    $close.on('click touchstart', closeLightbox);
+    $close.on('click', closeLightbox);
     $(document).on('keydown', function (e) {
         if (e.key === 'Escape') closeLightbox();
     });//section-03 갤러리 효과
