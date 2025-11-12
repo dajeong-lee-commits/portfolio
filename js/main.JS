@@ -19,7 +19,7 @@ $(function () {
     const $tabButtons = $tabItems.find('button');
     const $panels = $('.section-02 .contents .tab_list');
 
-    $tabButtons.on('click', function (e) {
+    $tabButtons.on('click touchstart', function (e) {
         e.preventDefault();
         const $li = $(this).closest('li');
         const index = $li.index();
@@ -36,7 +36,7 @@ $(function () {
      * ------------------------- */
     const getHeaderH = () => $('#header').outerHeight() || 0;
 
-    $('#header .gnb').on('click', '.menu', function (e) {
+    $('#header .gnb').on('click touchstart', '.menu', function (e) {
         e.preventDefault();
 
         const map = {
@@ -80,7 +80,7 @@ $(function () {
     }
 
     // 이미지 클릭(위임) → 열기
-    $(document).on('click', '.lightbox-gallery img', function (e) {
+    $(document).on('click touchstart', '.lightbox-gallery img', function (e) {
         e.preventDefault();
         const src = $(this).attr('data-image-hd') || this.src;
         const cap = $(this).attr('alt') || '';
@@ -88,10 +88,10 @@ $(function () {
     });
 
     // 오버레이 빈 영역 클릭 시 닫기 (한 번만 바인딩)
-    $lightbox.on('click', function (e) {
+    $lightbox.on('click touchstart', function (e) {
         if (e.target === this) closeLightbox();
     });
-    $close.on('click', closeLightbox);
+    $close.on('click touchstart', closeLightbox);
     $(document).on('keydown', function (e) {
         if (e.key === 'Escape') closeLightbox();
     });
