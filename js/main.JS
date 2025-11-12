@@ -1,7 +1,7 @@
 $(function () {
     $(window).on('scroll', function () {
         /* console.log($(window).scrollTop()); */
-        if ($(window).scrollTop() > 800) {
+        if ($(window).scrollTop() > 500) {
             $('header').addClass('active');
         } else {
             $('header').removeClass('active');

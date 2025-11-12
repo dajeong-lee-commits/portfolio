@@ -12,9 +12,6 @@
   overflow: hidden;
   /* 셰이더 캔버스 레이어 (z=5, 뒤로) */
   /* 레이아웃 래퍼 */
-  /* (옵션) 배경 텍스트가 있다면 여기에 스타일 추가 가능
-  .background_text { ... }
-  */
 }
 #main .main_visual .shader-root {
   position: absolute;
@@ -38,26 +35,22 @@
 #main .main_visual .layout .visual_text {
   position: relative;
   height: 100%;
-  font-size: 120px;
-  font-weight: 800;
-  line-height: 1;
+  font-size: 130px;
+  font-weight: 700;
+  line-height: 1.2;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 10;
-}
-#main .main_visual .layout .visual_text .text_top {
   color: #eee;
 }
 #main .main_visual .layout .visual_text .text_middle {
   color: transparent;
-  text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+  font-weight: 800;
+  -webkit-text-stroke: 1px #eeeeee;
+  mix-blend-mode: normal;
 }
-#main .main_visual .layout .visual_text .text_bottom {
-  color: #eee;
-}
-
 @media screen and (min-width: 861px) and (max-width: 1024px) {
   #main .main_visual .layout .visual_text {
     font-size: 100px;

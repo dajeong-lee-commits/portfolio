@@ -11,22 +11,22 @@
 @mixin btnStylePC {
   font-size: 16px;
   display: block;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   border-radius: 50px;
   white-space: nowrap;
 }
 
 @mixin btnHover {
-  color: white;
-  border: 1px solid #333333;
-  background-color: #333333;
+  color: #F5F5F5;
+  border: 1px solid #222222;
+  background-color: #222222;
   transition: 0.3s;
 }
 
 @mixin btnClicked {
-  color: white;
-  border: 1px solid #333333;
-  background-color: #333333;
+  color: #F5F5F5;
+  border: 1px solid #222222;
+  background-color: #222222;
   transition: 0.3s;
 }
 
@@ -36,6 +36,20 @@ body {
   font-family: "pretendard";
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 500;
+  min-height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; // top:0; right:0; bottom:0; left:0;
+  z-index: -99;
+  background: url("../img/source/drew-beamer-kUHfMW8awpE-unsplash.jpg") center / cover no-repeat;
+  // 선택: 배경 톤을 살짝 어둡게 하고 싶을 때
+  // background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("../img/bg/main-bg.jpg");
+  pointer-events: none;
+  will-change: transform;
 }
 
 section .inner,
@@ -98,11 +112,17 @@ section .inner,
 }
 
 #header.active {
-  background-color: #333333;
+  background-color: #222222;
 
 }
 
+
+
 #main {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+
   .section-01 {
     .inner {
       .section_title {
@@ -172,12 +192,13 @@ section .inner,
   }
 
   .section {
-    color: #333333;
+    color: #222222;
+
     .inner {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
 
       .tab_menu {
         display: flex;
@@ -225,9 +246,7 @@ section .inner,
             font-size: 30px;
             font-weight: 600;
             white-space: normal;
-            /* 기본 줄바꿈 허용 */
             word-break: keep-all;
-            /* 단어 중간에서 끊지 않음 */
             line-break: loose;
           }
 
@@ -243,7 +262,7 @@ section .inner,
               padding: 30px 30px 30px;
               width: 100%;
 
-              border: 1px solid #333333;
+              border: 1px solid #222222;
               border-radius: 36px;
 
               img {
@@ -253,7 +272,7 @@ section .inner,
 
             .tool {
               padding: 30px;
-              border: 1px solid #333333;
+              border: 1px solid #222222;
               border-radius: 36px;
               display: flex;
               gap: 36px;
@@ -282,7 +301,7 @@ section .inner,
           .item-right {
             width: 32.33%;
             padding: 30px;
-            border: 1px solid #333333;
+            border: 1px solid #222222;
             border-radius: 36px;
             display: flex;
             flex-direction: column;
@@ -336,7 +355,7 @@ section .inner,
                   display: inline-flex;
                   align-items: center;
                   justify-content: center;
-                  border: 1px solid #333333;
+                  border: 1px solid #222222;
                   border-radius: 20px;
                   text-align: center;
                   padding: 4px 16px;
@@ -441,7 +460,7 @@ section .inner,
 /* .section-03 end */
 
 #footer {
-  background-color: #333333;
+  background-color: #222222;
   color: #eeeeee;
 
   .inner {
@@ -882,7 +901,7 @@ section .inner,
               .item-left {
                 width: 100%;
                 gap: 16px;
-                border: 1px solid #333333;
+                border: 1px solid #222222;
                 border-radius: 16px;
                 align-items: center;
 
@@ -923,7 +942,7 @@ section .inner,
                 border-radius: 0;
 
                 .project_info {
-                  border: 1px solid #333333;
+                  border: 1px solid #222222;
                   padding: 16px;
                   border-radius: 16px;
                   gap: 10px;

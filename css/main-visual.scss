@@ -1,4 +1,3 @@
-
 $margin: 32px;
 $gutter: 16px;
 
@@ -11,7 +10,6 @@ $gutter: 16px;
 /* 섹션: 메인 비주얼 */
 #main {
     .main_visual {
-        
         position: relative;
         height: 100vh;
         overflow: hidden;
@@ -42,38 +40,34 @@ $gutter: 16px;
             .visual_text {
                 position: relative;
                 height: 100%;
-                font-size: 120px;
-                font-weight: 800;
-                line-height: 1;
+                font-size: 130px;
+                font-weight: 700;
+                line-height: 1.2;
                 text-align: center;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 z-index: 10;
+                color: #eee;
 
                 .text_top {
-                    color: #eee;
+
                 }
 
                 .text_middle {
                     color: transparent;
-                    text-shadow:
-                        -1px 0 #eee,
-                        0 1px #eee,
-                        1px 0 #eee,
-                        0 -1px #eee;
+                    font-weight: 800;                   
+                    -webkit-text-stroke: 1px #eeeeee;
+                    mix-blend-mode: normal;
                 }
 
                 .text_bottom {
-                    color: #eee;
+
                 }
             }
         }
 
-        /* (옵션) 배경 텍스트가 있다면 여기에 스타일 추가 가능
-  .background_text { ... }
-  */
+
     }
 }
 

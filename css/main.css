@@ -6,6 +6,18 @@ body {
   font-family: "pretendard";
   font-size: 16px;
   line-height: 1.5;
+  font-weight: 500;
+  min-height: 100%;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -99;
+  background: url("../img/source/drew-beamer-kUHfMW8awpE-unsplash.jpg") center/cover no-repeat;
+  pointer-events: none;
+  will-change: transform;
 }
 
 section .inner,
@@ -59,9 +71,14 @@ section .inner,
 }
 
 #header.active {
-  background-color: #333333;
+  background-color: #222222;
 }
 
+#main {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
 #main .section-01 .inner .section_title {
   margin-bottom: 80px;
 }
@@ -118,7 +135,7 @@ section .inner,
      object-fit: cover;
 }
 #main .section {
-  color: #333333;
+  color: #222222;
 }
 #main .section .inner {
   display: flex;
@@ -134,22 +151,22 @@ section .inner,
 #main .section .inner .tab_menu li button {
   font-size: 16px;
   display: block;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   border-radius: 50px;
   white-space: nowrap;
   padding: 4px 16px;
   cursor: pointer;
 }
 #main .section .inner .tab_menu li button:hover {
-  color: white;
-  border: 1px solid #333333;
-  background-color: #333333;
+  color: #F5F5F5;
+  border: 1px solid #222222;
+  background-color: #222222;
   transition: 0.3s;
 }
 #main .section .inner .tab_menu li.active button {
-  color: white;
-  border: 1px solid #333333;
-  background-color: #333333;
+  color: #F5F5F5;
+  border: 1px solid #222222;
+  background-color: #222222;
   transition: 0.3s;
 }
 #main .section .inner .tab_list {
@@ -175,9 +192,7 @@ section .inner,
   font-size: 30px;
   font-weight: 600;
   white-space: normal;
-  /* 기본 줄바꿈 허용 */
   word-break: keep-all;
-  /* 단어 중간에서 끊지 않음 */
   line-break: loose;
 }
 #main .section .inner .tab_list .item .item-left {
@@ -191,7 +206,7 @@ section .inner,
   justify-content: center;
   padding: 30px 30px 30px;
   width: 100%;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   border-radius: 36px;
 }
 #main .section .inner .tab_list .item .item-left .image img {
@@ -202,7 +217,7 @@ section .inner,
 }
 #main .section .inner .tab_list .item .item-left .tool {
   padding: 30px;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   border-radius: 36px;
   display: flex;
   gap: 36px;
@@ -227,7 +242,7 @@ section .inner,
 #main .section .inner .tab_list .item .item-right {
   width: 32.33%;
   padding: 30px;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   border-radius: 36px;
   display: flex;
   flex-direction: column;
@@ -275,16 +290,16 @@ section .inner,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #333333;
+  border: 1px solid #222222;
   border-radius: 20px;
   text-align: center;
   padding: 4px 16px;
   white-space: nowrap;
 }
 #main .section .inner .tab_list .item .item-right .link_wrap li a:hover {
-  color: white;
-  border: 1px solid #333333;
-  background-color: #333333;
+  color: #F5F5F5;
+  border: 1px solid #222222;
+  background-color: #222222;
   transition: 0.3s;
 }
 #main .section .inner .tab_list.active {
@@ -358,7 +373,7 @@ section .inner,
 
 /* .section-03 end */
 #footer {
-  background-color: #333333;
+  background-color: #222222;
   color: #eeeeee;
 }
 #footer .inner {
@@ -522,9 +537,9 @@ section .inner,
     font-size: 15px;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a:hover {
-    color: white;
-    border: 1px solid #333333;
-    background-color: #333333;
+    color: #F5F5F5;
+    border: 1px solid #222222;
+    background-color: #222222;
     transition: 0.3s;
   }
   #main .section-03 .inner .contents .lightbox-gallery {
@@ -648,7 +663,7 @@ section .inner,
   #main .section .inner .contents .tab_list .item .item-left {
     width: 100%;
     gap: 16px;
-    border: 1px solid #333333;
+    border: 1px solid #222222;
     border-radius: 16px;
     align-items: center;
   }
@@ -683,7 +698,7 @@ section .inner,
     border-radius: 0;
   }
   #main .section .inner .contents .tab_list .item .item-right .project_info {
-    border: 1px solid #333333;
+    border: 1px solid #222222;
     padding: 16px;
     border-radius: 16px;
     gap: 10px;
@@ -731,9 +746,9 @@ section .inner,
     font-size: 14px;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a:hover {
-    color: white;
-    border: 1px solid #333333;
-    background-color: #333333;
+    color: #F5F5F5;
+    border: 1px solid #222222;
+    background-color: #222222;
     transition: 0.3s;
   }
   #main .section-03 .inner .contents .lightbox-gallery {
