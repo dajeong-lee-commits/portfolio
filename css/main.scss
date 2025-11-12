@@ -520,7 +520,7 @@ section .inner,
   }
 
   #main {
-    
+
 
     .section-01 {
       .inner {
@@ -691,6 +691,15 @@ section .inner,
 
             .item {
               border-radius: 16px;
+
+            }
+
+            .item:hover {
+              img {
+                transform: scale(1);
+              }
+
+
             }
           }
         }
@@ -986,8 +995,13 @@ section .inner,
             grid-template-columns: 1fr 1fr;
             gap: 16px;
 
-            .item {
-              border-radius: 16px;
+
+            .item:hover {
+              img {
+                transform: scale(1);
+              }
+
+
             }
           }
         }

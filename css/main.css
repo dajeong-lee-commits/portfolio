@@ -530,6 +530,9 @@ section .inner,
   #main .section-03 .inner .contents .lightbox-gallery .item {
     border-radius: 16px;
   }
+  #main .section-03 .inner .contents .lightbox-gallery .item:hover img {
+    transform: scale(1);
+  }
   .lightbox img {
     width: 60%;
   }
@@ -733,8 +736,8 @@ section .inner,
     grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
-  #main .section-03 .inner .contents .lightbox-gallery .item {
-    border-radius: 16px;
+  #main .section-03 .inner .contents .lightbox-gallery .item:hover img {
+    transform: scale(1);
   }
   .lightbox img {
     width: 80%;
