@@ -33,9 +33,10 @@ section .inner,
   width: 100%;
   color: #eeeeee;
   height: 70px;
-  background-color: black;
   position: fixed;
   z-index: 99;
+  background-color: transparent;
+  transition: 0.5s ease-in-out;
 }
 #header .inner {
   width: 100%;
@@ -56,8 +57,12 @@ section .inner,
   display: flex;
   gap: 60px;
 }
+#header.active {
+  background-color: #000000;
+}
+
 #main .main_visual {
-  display: none;
+  /* display: none; */
 }
 
 .inner {
