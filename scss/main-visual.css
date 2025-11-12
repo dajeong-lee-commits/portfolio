@@ -25,15 +25,15 @@
   position: absolute;
   inset: 0;
   z-index: 5;
-  /* 뒤로 */
+  pointer-events: none;
 }
 .main_visual .shader-root canvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  /* 섹션 높이에 딱 맞춤 */
   display: block;
+  pointer-events: none;
 }
 .main_visual .layout {
   position: relative;
@@ -73,3 +73,8 @@
     font-size: 50px;
   }
 }
+/* dat.GUI 등 컨트롤 패널이 있다면
+.dg.ac {
+  z-index: 9999;
+}
+*//*# sourceMappingURL=main-visual.css.map */

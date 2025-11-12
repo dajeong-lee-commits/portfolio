@@ -24,15 +24,15 @@ $gutter: 16px;
         position: absolute;
         inset: 0;
         z-index: 5;
-        /* 뒤로 */
+        pointer-events: none; 
 
         canvas {
             position: absolute;
             inset: 0;
             width: 100%;
             height: 100%;
-            /* 섹션 높이에 딱 맞춤 */
             display: block;
+            pointer-events: none; 
         }
     }
 

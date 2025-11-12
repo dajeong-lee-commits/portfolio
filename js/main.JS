@@ -6,15 +6,9 @@ $(function () {
         } else {
             $('header').removeClass('active');
         }
-    });
+    });//헤더 배경 나타나기
 
 
-
-
-
-    /* -------------------------
-     * 탭 메뉴
-     * ------------------------- */
     const $tabItems = $('.tab_menu li');
     const $tabButtons = $tabItems.find('button');
     const $panels = $('.section-02 .contents .tab_list');
@@ -29,11 +23,9 @@ $(function () {
 
         $panels.removeClass('active').attr('hidden', true);
         $panels.eq(index).addClass('active').removeAttr('hidden');
-    });
+    }); //탭메뉴
 
-    /* -------------------------
-     * 헤더 내비 스크롤
-     * ------------------------- */
+
     const getHeaderH = () => $('#header').outerHeight() || 0;
 
     $('#header .gnb').on('click touchstart', '.menu', function (e) {
@@ -53,11 +45,9 @@ $(function () {
 
         const top = $(targetSelector).offset().top - getHeaderH();
         $('html, body').stop(true).animate({ scrollTop: top }, 800);
-    });
+    });//헤더 네비 스크롤
 
-    /* -------------------------
-     * 라이트박스 (중복 바인딩 제거 + ESC 닫기)
-     * ------------------------- */
+    
     const $lightbox = $("<div class='lightbox' role='dialog' aria-modal='true' hidden></div>");
     const $img = $("<img alt=''>");
     const $caption = $("<p class='caption' aria-live='polite'></p>");
@@ -94,7 +84,7 @@ $(function () {
     $close.on('click touchstart', closeLightbox);
     $(document).on('keydown', function (e) {
         if (e.key === 'Escape') closeLightbox();
-    });
+    });//section-03 갤러리 효과
 });
 
 /* https://codepen.io/VoXelo/pen/vEEPErJ 코드펜 소스1 */
