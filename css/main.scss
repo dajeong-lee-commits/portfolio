@@ -11,28 +11,25 @@
 @mixin btnStylePC {
   font-size: 16px;
   display: block;
-  border: 1px solid black;
+  border: 1px solid #333333;
   border-radius: 50px;
   white-space: nowrap;
 }
 
 @mixin btnHover {
   color: white;
-  border: 1px solid black;
-  background-color: black;
+  border: 1px solid #333333;
+  background-color: #333333;
   transition: 0.3s;
 }
 
 @mixin btnClicked {
   color: white;
-  border: 1px solid black;
-  background-color: black;
+  border: 1px solid #333333;
+  background-color: #333333;
   transition: 0.3s;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 html,
 body {
@@ -91,14 +88,17 @@ section .inner,
       gap: 60px;
 
       li {
-        .menu {}
+        .menu {
+          color: #eeeeee;
+          cursor: pointer;
+        }
       }
     }
   }
 }
 
 #header.active {
-  background-color: #000000;
+  background-color: #333333;
 
 }
 
@@ -172,6 +172,7 @@ section .inner,
   }
 
   .section {
+    color: #333333;
     .inner {
       display: flex;
       flex-direction: column;
@@ -440,7 +441,7 @@ section .inner,
 /* .section-03 end */
 
 #footer {
-  background-color: #000000;
+  background-color: #333333;
   color: #eeeeee;
 
   .inner {

@@ -1,9 +1,4 @@
-/* ==========================================================================
-   Main Visual (SCSS)
-   Original idea and inspired by https://www.shadertoy.com/view/fdXXWH
-   ========================================================================== */
 
-/* SCSS variables */
 $margin: 32px;
 $gutter: 16px;
 
@@ -16,7 +11,7 @@ $gutter: 16px;
 /* 섹션: 메인 비주얼 */
 #main {
     .main_visual {
-        display: none;
+        
         position: relative;
         height: 100vh;
         overflow: hidden;

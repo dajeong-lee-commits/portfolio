@@ -13,7 +13,7 @@ $(function () {
     const $tabButtons = $tabItems.find('button');
     const $panels = $('.section-02 .contents .tab_list');
 
-    $tabButtons.on('click touchstart', function (e) {
+    $tabButtons.on('click', function (e) {
         e.preventDefault();
         const $li = $(this).closest('li');
         const index = $li.index();
@@ -28,7 +28,7 @@ $(function () {
 
     const getHeaderH = () => $('#header').outerHeight() || 0;
 
-    $('#header .gnb').on('click touchstart', '.menu', function (e) {
+    $('#header .gnb').on('click', '.menu', function (e) {
         e.preventDefault();
 
         const map = {
@@ -70,7 +70,7 @@ $(function () {
     }
 
     // 이미지 클릭(위임) → 열기
-    $(document).on('click touchstart', '.lightbox-gallery img', function (e) {
+    $(document).on('click', '.lightbox-gallery img', function (e) {
         e.preventDefault();
         const src = $(this).attr('data-image-hd') || this.src;
         const cap = $(this).attr('alt') || '';
