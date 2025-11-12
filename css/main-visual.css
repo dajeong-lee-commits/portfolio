@@ -1,64 +1,80 @@
-/*
-  Original idea and inspired by https://www.shadertoy.com/view/fdXXWH
-*/
-
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300&family=Space+Mono&display=swap");
-
+@charset "UTF-8";
+/* ==========================================================================
+   Main Visual (SCSS)
+   Original idea and inspired by https://www.shadertoy.com/view/fdXXWH
+   ========================================================================== */
+/* SCSS variables */
+/* CSS variables (runtime 사용용) */
 :root {
-    --margin: 32px;
-    --gutter: 16px;
+  --margin: 32px;
+  --gutter: 16px;
 }
 
-.shader-root {
-    position: absolute;
-    inset: 0;
-    z-index: 5; /* 뒤로 */
-}
-.shader-root canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%; /* 섹션 높이에 딱 맞춤 */
-    display: block;
-}
+/* 섹션: 메인 비주얼 */
 .main_visual {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  /* 셰이더 캔버스 레이어 (z=5, 뒤로) */
+  /* 레이아웃 래퍼 */
+  /* (옵션) 배경 텍스트가 있다면 여기에 스타일 추가 가능
+  .background_text { ... }
+  */
+}
+.main_visual .shader-root {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  /* 뒤로 */
+}
+.main_visual .shader-root canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* 섹션 높이에 딱 맞춤 */
+  display: block;
+}
+.main_visual .layout {
+  position: relative;
+  height: 100%;
+  /* 중앙 타이포 */
+}
+.main_visual .layout .visual_text {
+  position: relative;
+  height: 100%;
+  font-size: 120px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+.main_visual .layout .visual_text .text_top {
+  color: #eee;
+}
+.main_visual .layout .visual_text .text_middle {
+  color: transparent;
+  text-shadow: -1px 0 #eee, 0 1px #eee, 1px 0 #eee, 0 -1px #eee;
+}
+.main_visual .layout .visual_text .text_bottom {
+  color: #eee;
 }
 
-.layout {
-    position: relative;
-    height: 100%;
+@media screen and (min-width: 861px) and (max-width: 1024px) {
+  #main .main_visual .layout .visual_text {
+    font-size: 100px;
+  }
 }
-.visual_text {
-    position: relative;
-    height: 100%;
-    font-size: 120px;
-    font-weight: 800;
-    line-height: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 10;
+@media screen and (max-width: 860px) {
+  #main .main_visual .layout .visual_text {
+    font-size: 50px;
+  }
 }
-.visual_text .text_top {
-    color: #eeeeee;
+/* dat.GUI 등 컨트롤 패널이 있다면
+.dg.ac {
+  z-index: 9999;
 }
-.visual_text .text_middle {
-    
-    color: transparent;
-    text-shadow:
-        -1px 0 #eeeeee,
-        0 1px #eeeeee,
-        1px 0 #eeeeee,
-        0 -1px #eeeeee;
-}
-.visual_text .text_bottom {
-    color: #eeeeee;
-}
-
-/* .dg.ac {
-    z-index: 9999;
-} */
+*//*# sourceMappingURL=main-visual.css.map */
