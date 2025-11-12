@@ -43,9 +43,45 @@ $(function () {
             {
                 scrollTop: offsetTop - headerHeight // 고정 헤더 높이만큼 위로 보정
             },
-            800 
+            800
         );
     });
+
+    var $lightbox = $("<div class='lightbox'></div>");
+    var $img = $("<img>");
+    var $caption = $("<p class='caption'></p>");
+
+    // Add image and caption to lightbox
+
+    $lightbox
+        .append($img)
+        .append($caption);
+
+    // Add lighbox to document
+
+    $('body').append($lightbox);
+
+    $('.list img').click(function (e) {
+        e.preventDefault();
+
+        // Get image link and description
+        var src = $(this).attr("data-image-hd");
+        var cap = $(this).attr("alt");
+
+        // Add data to lighbox
+
+        $img.attr('src', src);
+        $caption.text(cap);
+
+        // Show lightbox
+
+        $lightbox.fadeIn('fast');
+
+        $lightbox.click(function () {
+            $lightbox.fadeOut('fast');
+        });
+    });
+
 
 });
 

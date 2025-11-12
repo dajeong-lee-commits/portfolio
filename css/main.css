@@ -31,7 +31,7 @@ section .inner,
 
 #header {
   width: 100%;
-  color: rgb(255, 47, 47);
+  color: #eeeeee;
   height: 70px;
   background-color: black;
   position: fixed;
@@ -57,27 +57,13 @@ section .inner,
   gap: 60px;
 }
 #main .main_visual {
-  background-color: #000000;
-  color: #eeeeee;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
+  display: none;
 }
-#main .main_visual .visual_canvas {
-  /* position: absolute;
-  inset: 0; */
-}
-#main .main_visual .visual_canvas canvas {
-  /* position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block; */
-}
-#main .inner {
+
+.inner {
   height: 100%;
 }
-#main .inner .visual_text {
+.inner .visual_text {
   height: 100%;
   font-size: 120px;
   font-weight: 800;
@@ -87,14 +73,13 @@ section .inner,
   flex-direction: column;
   justify-content: center;
 }
-#main .inner .visual_text .text_top {
+.inner .visual_text .text_top {
   color: #eeeeee;
 }
-#main .inner .visual_text .text_middle {
+.inner .visual_text .text_middle {
   text-shadow: -1px 0 #eeeeee, 0 1px #eeeeee, 1px 0 #eeeeee, 0 -1px #eeeeee;
-  z-index: -1;
 }
-#main .inner .visual_text .text_bottom {
+.inner .visual_text .text_bottom {
   color: #eeeeee;
 }
 
@@ -325,20 +310,65 @@ section .inner,
   display: flex;
 }
 
-.section-03 .inner .app_renewal {
-  color: white;
-  border: 1px solid black;
-  background-color: black;
-  transition: 0.3s;
+.section-03 .inner .contents .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+.section-03 .inner .contents .list .item {
+  width: 23.5%;
+}
+.section-03 .inner .contents .list .item > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.section-03 .inner .contents .text-center {
+  text-align: center;
+  margin-bottom: 1em;
+}
+/*Lighbox CSS*/
+.lightbox {
+  display: none;
+  width: 66.25%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  padding-top: 30px;
+  box-sizing: border-box;
 }
 
-.section-04 .clone_coding {
-  color: white;
-  border: 1px solid black;
-  background-color: black;
-  transition: 0.3s;
+.lightbox img {
+  display: block;
 }
 
+.lightbox .caption {
+  margin: 15px auto;
+  width: 50%;
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #eee;
+}
+
+.github-link {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.github-link:hover,
+.github-link:active,
+.github-link:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* section-3 갤러리 */
 #footer {
   background-color: #000000;
   color: #eeeeee;

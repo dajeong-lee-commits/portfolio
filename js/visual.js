@@ -1,3 +1,8 @@
+
+/* https://codepen.io/jkantner/pen/zbNPMV */
+/* https://codepen.io/filipz/pen/dPPyJZX */
+/* https://codepen.io/filipz/pen/VYvKJQR */
+
 /* import * as THREE from "https://esm.sh/three";
 import { OrbitControls } from "https://esm.sh/three/examples/jsm/controls/OrbitControls.js";
 import { EffectComposer } from "https://esm.sh/three/examples/jsm/postprocessing/EffectComposer.js";
