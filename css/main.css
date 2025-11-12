@@ -182,7 +182,7 @@ section .inner,
   justify-content: space-between;
   position: relative;
   padding: 85px 0 0 0;
-  gap: 20px;
+  gap: 24px;
 }
 .section .inner .tab_list .item .item-title {
   width: 100%;
@@ -203,7 +203,7 @@ section .inner,
   width: 66%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 .section .inner .tab_list .item .item-left .image {
   display: flex;
@@ -310,50 +310,57 @@ section .inner,
   display: flex;
 }
 
-.section-03 .inner .contents .list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
+.section-03 .inner .contents .lightbox-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 24px; /* 요소 간의 간격을 설정합니다. */
 }
-.section-03 .inner .contents .list .item {
-  width: 23.5%;
+.section-03 .inner .contents .lightbox-gallery .item {
+  border-radius: 18px;
+  overflow: hidden;
 }
-.section-03 .inner .contents .list .item > img {
+.section-03 .inner .contents .lightbox-gallery .item img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  transition: transform 0.3s ease-in-out;
 }
-.section-03 .inner .contents .text-center {
-  text-align: center;
-  margin-bottom: 1em;
+.section-03 .inner .contents .lightbox-gallery .item:hover img {
+  transform: scale(1.1);
 }
+
 /*Lighbox CSS*/
 .lightbox {
-  display: none;
-  width: 66.25%;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 20;
-  padding-top: 30px;
-  box-sizing: border-box;
+  display: none;
+  /* .caption {
+    display: none;
+    margin: 15px auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #eee;
+  } 캡션 사용시 활성화*/
 }
-
 .lightbox img {
   display: block;
-}
-
-.lightbox .caption {
-  margin: 15px auto;
   width: 50%;
-  text-align: center;
-  font-size: 1em;
-  line-height: 1.5;
-  font-weight: 700;
-  color: #eee;
+  max-width: 588px;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .github-link {
@@ -368,7 +375,7 @@ section .inner,
   text-decoration: none;
 }
 
-/* section-3 갤러리 */
+/* .section-03 end */
 #footer {
   background-color: #000000;
   color: #eeeeee;
@@ -541,6 +548,16 @@ section .inner,
     border: 1px solid black;
     background-color: black;
     transition: 0.3s;
+  }
+  #main .section-03 .inner .contents .lightbox-gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  #main .section-03 .inner .contents .lightbox-gallery .item {
+    border-radius: 16px;
+  }
+  .lightbox img {
+    width: 60%;
   }
   #footer .inner {
     padding: 75px 0 50px;
@@ -740,6 +757,17 @@ section .inner,
     border: 1px solid black;
     background-color: black;
     transition: 0.3s;
+  }
+  #main .section-03 .inner .contents .lightbox-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  #main .section-03 .inner .contents .lightbox-gallery .item {
+    border-radius: 16px;
+  }
+  .lightbox img {
+    width: 80%;
+    max-width: 534px;
   }
   #footer .inner {
     padding: 60px 0 30px;

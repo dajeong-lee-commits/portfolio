@@ -1,88 +1,87 @@
-
 $(function () {
-    $('.tab_menu li button').on('click', function (e) {
+    /* -------------------------
+     * 탭 메뉴
+     * ------------------------- */
+    const $tabItems = $('.tab_menu li');
+    const $tabButtons = $tabItems.find('button');
+    const $panels = $('.section-02 .contents .tab_list');
+
+    $tabButtons.on('click', function (e) {
         e.preventDefault();
+        const $li = $(this).closest('li');
+        const index = $li.index();
 
-        // 클릭한 버튼이 몇 번째 li인지
-        const index = $(this).parent().index();
+        $tabItems.removeClass('active');
+        $li.addClass('active');
 
-        // 메뉴 active 처리
-        $('.tab_menu li').removeClass('active');
-        $(this).parent().addClass('active');
-
-        // 내용 active 처리
-        $('.section-02 .contents .tab_list').removeClass('active');
-        $('.section-02 .contents .tab_list').eq(index).addClass('active');
+        $panels.removeClass('active').attr('hidden', true);
+        $panels.eq(index).addClass('active').removeAttr('hidden');
     });
 
-    const headerHeight = $('#header').outerHeight();
+    /* -------------------------
+     * 헤더 내비 스크롤
+     * ------------------------- */
+    const getHeaderH = () => $('#header').outerHeight() || 0;
 
-    $('#header .gnb .menu').on('click', function (e) {
+    $('#header .gnb').on('click', '.menu', function (e) {
         e.preventDefault();
 
-        let targetSelector = '';
+        const map = {
+            'menu-01': '.main_visual',
+            'menu-02': '.section-01',
+            'menu-03': '.section-02',
+            'menu-04': '.section-03',
+            'menu-05': '#footer'
+        };
 
-        if ($(this).hasClass('menu-01')) {
-            targetSelector = '.main_visual';
-        } else if ($(this).hasClass('menu-02')) {
-            targetSelector = '.section-01';
-        } else if ($(this).hasClass('menu-03')) {
-            targetSelector = '.section-02';
-        } else if ($(this).hasClass('menu-04')) {
-            targetSelector = '.section-03';
-        } else if ($(this).hasClass('menu-05')) {
-            targetSelector = '#footer';
-        }
+        const cls = this.className.split(' ').find(c => /^menu-\d+/.test(c));
+        const targetSelector = map[cls];
+        if (!targetSelector || !$(targetSelector).length) return;
 
-        // 혹시라도 매칭되는 게 없으면 중단
-        if (!targetSelector) return;
-
-        const offsetTop = $(targetSelector).offset().top;
-
-        $('html, body').animate(
-            {
-                scrollTop: offsetTop - headerHeight // 고정 헤더 높이만큼 위로 보정
-            },
-            800
-        );
+        const top = $(targetSelector).offset().top - getHeaderH();
+        $('html, body').stop(true).animate({ scrollTop: top }, 800);
     });
 
-    var $lightbox = $("<div class='lightbox'></div>");
-    var $img = $("<img>");
-    var $caption = $("<p class='caption'></p>");
+    /* -------------------------
+     * 라이트박스 (중복 바인딩 제거 + ESC 닫기)
+     * ------------------------- */
+    const $lightbox = $("<div class='lightbox' role='dialog' aria-modal='true' hidden></div>");
+    const $img = $("<img alt=''>");
+    const $caption = $("<p class='caption' aria-live='polite'></p>");
+    const $close = $("<button type='button' class='lightbox-close' aria-label='Close'>&times;</button>");
 
-    // Add image and caption to lightbox
+    $lightbox.append($close, $img, $caption).appendTo('body');
 
-    $lightbox
-        .append($img)
-        .append($caption);
-
-    // Add lighbox to document
-
-    $('body').append($lightbox);
-
-    $('.list img').click(function (e) {
-        e.preventDefault();
-
-        // Get image link and description
-        var src = $(this).attr("data-image-hd");
-        var cap = $(this).attr("alt");
-
-        // Add data to lighbox
-
+    function openLightbox(src, cap) {
         $img.attr('src', src);
-        $caption.text(cap);
-
-        // Show lightbox
-
-        $lightbox.fadeIn('fast');
-
-        $lightbox.click(function () {
-            $lightbox.fadeOut('fast');
+        $caption.text(cap || '');
+        $lightbox.fadeIn('fast').removeAttr('hidden');
+        $('body').addClass('no-scroll');
+        $close.focus();
+    }
+    function closeLightbox() {
+        $lightbox.fadeOut('fast', function () {
+            $lightbox.attr('hidden', true);
+            $('body').removeClass('no-scroll');
         });
+    }
+
+    // 이미지 클릭(위임) → 열기
+    $(document).on('click', '.lightbox-gallery img', function (e) {
+        e.preventDefault();
+        const src = $(this).attr('data-image-hd') || this.src;
+        const cap = $(this).attr('alt') || '';
+        openLightbox(src, cap);
     });
 
-
+    // 오버레이 빈 영역 클릭 시 닫기 (한 번만 바인딩)
+    $lightbox.on('click', function (e) {
+        if (e.target === this) closeLightbox();
+    });
+    $close.on('click', closeLightbox);
+    $(document).on('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
 });
 
 /* https://codepen.io/VoXelo/pen/vEEPErJ 코드펜 소스1 */
