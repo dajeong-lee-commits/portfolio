@@ -100,7 +100,7 @@ window.onload = () => {
       }
 
       vec3 background(vec3 d){
-        float light = dot(d, sqrt(vec3(-0.3, 0.5, 0.2)));
+        float light = dot(d, normalize(vec3(-3.0, -0.5, 0.2)));
         return vec3(max(light * 0.5 + 0.5, 0.0));
       }
 
@@ -180,10 +180,10 @@ window.onload = () => {
 
         // 밝기(명도)
         col *= intensity;
-        col *= 0.6; // ← 명도를 70%로 줄임 (0.0~1.0 사이 값)
+        /* col *= 0.99; // ← 명도를 70%로 줄임 (0.0~1.0 사이 값) */
 
         // 대비
-        float contrast = 1.99; // ← 1.0은 기본, 1.2는 약간 더 강하게
+        float contrast = 1.0; // ← 1.0은 기본, 1.2는 약간 더 강하게
         col = (col - 0.5) * contrast + 0.5;
 
         // 최종 출력 (한 번만!)

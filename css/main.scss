@@ -389,6 +389,7 @@ section .inner,
           .item {
             border-radius: 18px;
             overflow: hidden;
+            height: 282px;
 
             img {
               width: 100%;
@@ -713,6 +714,7 @@ section .inner,
             .item {
               border-radius: 16px;
 
+
             }
 
             .item:hover {
@@ -1015,6 +1017,11 @@ section .inner,
           .lightbox-gallery {
             grid-template-columns: 1fr 1fr;
             gap: 16px;
+
+            .item {
+              
+              
+            }
 
 
             .item:hover {

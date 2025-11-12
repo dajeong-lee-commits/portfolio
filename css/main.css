@@ -314,6 +314,7 @@ section .inner,
 #main .section-03 .inner .contents .lightbox-gallery .item {
   border-radius: 18px;
   overflow: hidden;
+  height: 282px;
 }
 #main .section-03 .inner .contents .lightbox-gallery .item img {
   width: 100%;
