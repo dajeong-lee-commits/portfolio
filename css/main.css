@@ -85,6 +85,7 @@ section .inner,
 }
 #main .section-01 .inner .section_title {
   margin-bottom: 80px;
+  font-family: "Cabinor";
 }
 #main .section-01 .inner .contents {
   display: flex;
