@@ -71,7 +71,7 @@ section .inner,
 
 #header {
   width: 100%;
-  color: #eeeeee;
+  color: #222222;
   height: 70px;
   position: fixed;
   z-index: 99;
@@ -113,6 +113,7 @@ section .inner,
 
 #header.active {
   background-color: #222222;
+  color: #eeeeee;
 
 }
 
