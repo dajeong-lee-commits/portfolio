@@ -48,20 +48,26 @@ $gutter: 16px;
                 flex-direction: column;
                 justify-content: center;
                 z-index: 10;
-                color: #eee;
+                color: #222222;
+                opacity: 1;
 
                 .text_top {
+                    color: transparent;
+                    font-weight: 800;                   
+                    -webkit-text-stroke: 1.5px #222222;
+                    mix-blend-mode: normal;
 
                 }
 
                 .text_middle {
-                    color: transparent;
-                    font-weight: 800;                   
-                    -webkit-text-stroke: 1px #eeeeee;
-                    mix-blend-mode: normal;
+                    
                 }
 
                 .text_bottom {
+                    color: transparent;
+                    font-weight: 800;                   
+                    -webkit-text-stroke: 1.5px #222222;
+                    mix-blend-mode: normal;
 
                 }
             }

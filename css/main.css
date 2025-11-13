@@ -59,6 +59,7 @@ section .inner,
 }
 #header .inner .logo a img {
   display: block;
+  filter: brightness(0) saturate(100%) invert(9%) sepia(3%) saturate(16%) hue-rotate(332deg) brightness(95%) contrast(89%);
 }
 #header .inner .gnb {
   font-size: 18px;
@@ -66,12 +67,14 @@ section .inner,
   gap: 60px;
 }
 #header .inner .gnb li .menu {
-  color: #eeeeee;
+  color: #222222;
   cursor: pointer;
 }
 
 #header.active {
   background-color: #222222;
+}
+#header.active .inner .gnb li .menu {
   color: #eeeeee;
 }
 
@@ -159,13 +162,13 @@ section .inner,
   cursor: pointer;
 }
 #main .section .inner .tab_menu li button:hover {
-  color: #F5F5F5;
+  color: #f5f5f5;
   border: 1px solid #222222;
   background-color: #222222;
   transition: 0.3s;
 }
 #main .section .inner .tab_menu li.active button {
-  color: #F5F5F5;
+  color: #f5f5f5;
   border: 1px solid #222222;
   background-color: #222222;
   transition: 0.3s;
@@ -298,7 +301,7 @@ section .inner,
   white-space: nowrap;
 }
 #main .section .inner .tab_list .item .item-right .link_wrap li a:hover {
-  color: #F5F5F5;
+  color: #f5f5f5;
   border: 1px solid #222222;
   background-color: #222222;
   transition: 0.3s;
@@ -539,7 +542,7 @@ section .inner,
     font-size: 15px;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a:hover {
-    color: #F5F5F5;
+    color: #f5f5f5;
     border: 1px solid #222222;
     background-color: #222222;
     transition: 0.3s;
@@ -748,7 +751,7 @@ section .inner,
     font-size: 14px;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a:hover {
-    color: #F5F5F5;
+    color: #f5f5f5;
     border: 1px solid #222222;
     background-color: #222222;
     transition: 0.3s;
