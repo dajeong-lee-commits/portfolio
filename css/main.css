@@ -85,7 +85,6 @@ section .inner,
 }
 #main .section-01 .inner .section_title {
   margin-bottom: 80px;
-  font-family: "Cabinor";
 }
 #main .section-01 .inner .contents {
   display: flex;
@@ -116,14 +115,14 @@ section .inner,
 }
 #main .section-01 .inner .contents .list .item h3 {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
 }
-#main .section-01 .inner .contents .list .item ul li {
+#main .section-01 .inner .contents .list .item ul > li {
+  font-size: 18px;
   margin-top: 4px;
 }
 #main .section-01 .inner .contents .list .item .Skill_list {
-  font-size: 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 24px;
@@ -132,6 +131,7 @@ section .inner,
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 14px;
 }
 #main .section-01 .inner .contents .list .item .Skill_list li img {
   width: 36px;
