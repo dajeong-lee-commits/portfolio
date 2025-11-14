@@ -418,9 +418,7 @@ section .inner,
                 @include imgBox();
               }
 
-              .QR_mobile {
-                display: none;
-              }
+
             }
 
             .link_wrap {
@@ -1052,7 +1050,7 @@ section .inner,
 
                   .QR_pc {}
 
-                  .QR_mobile {
+                  /* .QR_mobile {
                     display: flex;
                     justify-content: center;
                     padding: 0;
@@ -1065,29 +1063,28 @@ section .inner,
 
                     .QR_btn {
                       width: 20px;
-                      display: block;
-                    }
-                  }
+                      display: block; 안씀
+                    } */
                 }
+              }
 
-                .link_wrap {
-                  flex-wrap: nowrap;
-                  row-gap: 0;
-                  gap: 8px;
-                  position: absolute;
-                  bottom: 0;
-                  justify-content: flex-start;
+              .link_wrap {
+                flex-wrap: nowrap;
+                row-gap: 0;
+                gap: 8px;
+                position: absolute;
+                bottom: 0;
+                justify-content: flex-start;
 
-                  li {
-                    width: auto;
+                li {
+                  width: auto;
 
-                    a {
-                      padding: 2px 14px;
-                    }
+                  a {
+                    padding: 2px 14px;
+                  }
 
-                    a:hover {
-                      @include btnHover();
-                    }
+                  a:hover {
+                    @include btnHover();
                   }
                 }
               }
@@ -1096,156 +1093,138 @@ section .inner,
         }
       }
     }
-
-    .section-03 {
-      .inner {
-        .contents {
-          .lightbox-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 0;
-            row-gap: 16px;
-
-
-
-            .item {
-              width: 48.3%;
-              height: auto;
-
-
-            }
-
-            .item:hover {
-              img {
-                transform: scale(1);
-              }
-            }
-          }
-        }
-      }
-    }
   }
 
-  .lightbox {
-    img {
-      width: 80%;
-      max-width: 534px;
-    }
-  }
-
-  #footer {
+  .section-03 {
     .inner {
-      padding: 60px 0 30px;
-
       .contents {
-        address {
-          font-size: 16px;
+        .lightbox-gallery {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 0;
+          row-gap: 16px;
 
-          h3 {
-            margin-bottom: 4px;
+
+
+          .item {
+            width: 48.3%;
+            height: auto;
+
+
           }
 
-          .name {}
-
-          .email {}
-
-          .phone {}
-        }
-
-        small {
-          p {
-            font-size: 14px;
-          }
-
-          .copyright {
-            font-size: 12px;
+          .item:hover {
+            img {
+              transform: scale(1);
+            }
           }
         }
       }
     }
   }
 }
+
+.lightbox {
+  img {
+    width: 80%;
+    max-width: 534px;
+  }
+}
+
+#footer {
+  .inner {
+    padding: 60px 0 30px;
+
+    .contents {
+      address {
+        font-size: 16px;
+
+        h3 {
+          margin-bottom: 4px;
+        }
+
+        .name {}
+
+        .email {}
+
+        .phone {}
+      }
+
+      small {
+        p {
+          font-size: 14px;
+        }
+
+        .copyright {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: 390px) {
 
   #main {
 
+    .section {
+      .inner {
+        .contents {
+          .tab_list {
+            gap: 60px;
 
-    .contents {
-      .tab_list {
-        gap: 60px;
+            .item {
+              flex-direction: column;
+              padding: 0;
+              gap: 16px;
 
-        .item {
-          flex-direction: column;
-          padding: 0;
-          gap: 16px;
+              .item-right {
 
-          .item-right {
-            
-            width: 100%;
-            padding: 0 0 42px;
-            border: none;
-            border-radius: 0;
 
-            .project_info {
-              border: 1px solid #222222;
-              padding: 16px;
-              border-radius: 16px;
-              gap: 10px;
+                padding: 0 0 91px;
 
-              p {}
-            }
 
-            .QR {
-              
-            
-              position: absolute;
-              
-              top: 50%;
-              right: 0;
-              width: 75px;
-              height: 75px;
+                .project_info {
+                  margin-bottom: 16px;
 
-              min-width: unset;
-
-              .QR_pc {}
-
-              .QR_mobile {
-                /* display: flex;
-                justify-content: center;
-                padding: 0;
-                width: 100%;
-                height: 36px;
-                border: 1px solid #222222;
-                border-radius: 8px;
-                cursor: pointer;
-                display: none; */
-
-/*                 .QR_btn {
-                  width: 20px;
-                  display: block;
-                } */
-              }
-            }
-
-            .link_wrap {
-              flex-wrap: nowrap;
-              row-gap: 0;
-              gap: 8px;
-              position: absolute;
-              bottom: 0;
-              justify-content: flex-start;
-
-              li {
-                width: auto;
-
-                a {
-                  padding: 2px 14px;
+                  p {}
                 }
 
-                a:hover {
-                  @include btnHover();
+                .QR {
+                 
+                  top: unset;
+                  bottom: 0;
+                  right: 0;
+                  
+                  height: 75px;
+
+                  min-width: unset;
+
+                  .QR_pc {}
+                }
+              }
+
+              .link_wrap {
+                flex-wrap: nowrap;
+                row-gap: 0;
+                gap: 8px;
+                position: absolute;
+                bottom: 0;
+                justify-content: flex-start;
+                
+
+                li {
+                  width: auto;
+
+                  a {
+                    padding: 2px 14px;
+                  }
+
+                  a:hover {
+                    @include btnHover();
+                  }
                 }
               }
             }
@@ -1255,5 +1234,3 @@ section .inner,
     }
   }
 }
-
-
