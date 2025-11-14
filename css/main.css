@@ -416,6 +416,10 @@ section .inner,
 }
 
 @media screen and (min-width: 861px) and (max-width: 1024px) {
+  html,
+  body {
+    font-size: 16px;
+  }
   section .inner,
   #footer .inner {
     padding: 75px 0;
@@ -486,8 +490,8 @@ section .inner,
     margin-bottom: 30px;
   }
   #main .section .inner .tab_menu li button {
-    padding: 2px 14px;
-    font-size: 15px;
+    padding: 3px 14px;
+    font-size: 16px;
   }
   #main .section .inner .contents .tab_list {
     gap: 100px;
@@ -532,7 +536,7 @@ section .inner,
     gap: 10px;
   }
   #main .section .inner .contents .tab_list .item .item-right .project_info p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.4;
   }
   #main .section .inner .contents .tab_list .item .item-right .QR {
@@ -545,8 +549,8 @@ section .inner,
     width: 47.95%;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a {
-    padding: 2px 14px;
-    font-size: 15px;
+    padding: 3px 14px;
+    font-size: 16px;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a:hover {
     color: #f5f5f5;
@@ -580,7 +584,7 @@ section .inner,
 @media screen and (max-width: 860px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
   section .inner {
     width: calc(100% - 40px);
@@ -656,7 +660,6 @@ section .inner,
   }
   #main .section .inner .tab_menu li button {
     padding: 2px 14px;
-    font-size: 14px;
   }
   #main .section .inner .contents .tab_list {
     gap: 60px;
@@ -668,7 +671,7 @@ section .inner,
   }
   #main .section .inner .contents .tab_list .item .item-title {
     position: static;
-    font-size: 21px;
+    font-size: 22px;
     left: 0;
     transform: none;
   }
@@ -715,19 +718,12 @@ section .inner,
     border-radius: 16px;
     gap: 10px;
   }
-  #main .section .inner .contents .tab_list .item .item-right .project_info p {
-    font-size: 14px;
-  }
   #main .section .inner .contents .tab_list .item .item-right .QR {
-    margin: 16px 16px 0 0;
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 36px;
+    top: 16px;
+    right: 16px;
+    width: 78px;
     min-width: unset;
-  }
-  #main .section .inner .contents .tab_list .item .item-right .QR .QR_pc {
-    display: none;
   }
   #main .section .inner .contents .tab_list .item .item-right .QR .QR_mobile {
     display: flex;
@@ -738,6 +734,7 @@ section .inner,
     border: 1px solid #222222;
     border-radius: 8px;
     cursor: pointer;
+    display: none;
   }
   #main .section .inner .contents .tab_list .item .item-right .QR .QR_mobile .QR_btn {
     width: 20px;
@@ -756,7 +753,6 @@ section .inner,
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a {
     padding: 2px 14px;
-    font-size: 14px;
   }
   #main .section .inner .contents .tab_list .item .item-right .link_wrap li a:hover {
     color: #f5f5f5;

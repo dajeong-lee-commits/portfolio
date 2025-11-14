@@ -530,6 +530,7 @@ section .inner,
 @media screen and (min-width: 861px) and (max-width: 1024px) {
   html,
   body {
+    font-size: 16px;
   }
 
   section .inner,
@@ -637,8 +638,8 @@ section .inner,
 
           li {
             button {
-              padding: 2px 14px;
-              font-size: 15px;
+              padding: 3px 14px;
+              font-size: 16px;
             }
           }
         }
@@ -694,7 +695,7 @@ section .inner,
                   gap: 10px;
 
                   p {
-                    font-size: 15px;
+                    font-size: 16px;
                     line-height: 1.4;
                   }
                 }
@@ -710,8 +711,8 @@ section .inner,
                     width: 47.95%;
 
                     a {
-                      padding: 2px 14px;
-                      font-size: 15px;
+                      padding: 3px 14px;
+                      font-size: 16px;
                     }
 
                     a:hover {
@@ -792,7 +793,7 @@ section .inner,
 @media screen and (max-width: 860px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   section .inner {
@@ -904,7 +905,6 @@ section .inner,
           li {
             button {
               padding: 2px 14px;
-              font-size: 14px;
             }
           }
         }
@@ -920,7 +920,7 @@ section .inner,
 
               .item-title {
                 position: static;
-                font-size: 21px;
+                font-size: 22px;
                 left: 0;
                 transform: none;
               }
@@ -975,21 +975,19 @@ section .inner,
                   gap: 10px;
 
                   p {
-                    font-size: 14px;
                   }
                 }
 
                 .QR {
-                  margin: 16px 16px 0 0;
                   position: absolute;
-                  top: 0;
-                  right: 0;
-                  width: 36px;
+                  top: 16px;
+                  right: 16px;
+                  width: 78px;
 
                   min-width: unset;
 
                   .QR_pc {
-                    display: none;
+                    
                   }
 
                   .QR_mobile {
@@ -1001,6 +999,7 @@ section .inner,
                     border: 1px solid #222222; 
                     border-radius: 8px;
                     cursor: pointer;
+                    display: none;
 
                     .QR_btn {
                       width: 20px;
@@ -1022,7 +1021,6 @@ section .inner,
 
                     a {
                       padding: 2px 14px;
-                      font-size: 14px;
                     }
 
                     a:hover {
