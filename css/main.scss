@@ -91,13 +91,12 @@ section .inner,
       a {
         img {
           display: block;
-          filter: brightness(0) saturate(100%) invert(9%) sepia(3%) saturate(16%) hue-rotate(332deg) brightness(95%)
-            contrast(89%);
+          filter: brightness(0) saturate(100%) invert(9%) sepia(3%) saturate(16%) hue-rotate(332deg) brightness(95%) contrast(89%);
         }
       }
     }
 
-    .gnb {
+    .gnb.pc {
       font-size: 18px;
       display: flex;
       gap: 60px;
@@ -109,24 +108,96 @@ section .inner,
         }
       }
     }
+
+    .mobile {}
+
+    .menu_btn {
+      display: flex;
+      align-items: center;
+      border: 1.8px solid #222222;
+      border-radius: 50px;
+      padding: 8px 8px;
+
+
+      img {
+        width: 24px;
+        display: block;
+
+
+      }
+
+    }
+
+    .nav.mobile {
+      width: 70%;
+      height: 100%;
+      background-color: #222222;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      padding: 20px;
+      transition: 0.7s;
+
+      .close_btn {
+        position: absolute;
+        right: 16px;
+        padding: 0;
+
+        img {}
+
+      }
+
+      .gnb.mobile {
+        margin-top: 20px;
+
+
+        li {
+
+          button {
+            color: #fff;
+            text-align: left;
+            width: 100%;
+            height: 40px;
+            padding: 0;
+          }
+        }
+
+      }
+    }
+
+    .nav.mobile.active {
+      right: 0;
+    }
   }
 }
 
 #header.active {
   background-color: #222222;
+
   .inner {
     .logo {
       a {
         img {
+          filter: none;
         }
       }
     }
-    .gnb {
+
+    .gnb.pc {
       li {
         .menu {
           color: #eeeeee;
         }
       }
+    }
+
+    .menu_btn {
+      img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(39%) hue-rotate(320deg) brightness(118%) contrast(100%);
+      }
+
     }
   }
 }
@@ -175,14 +246,14 @@ section .inner,
             }
 
             ul {
-              > li {
+              >li {
                 font-size: 18px;
                 margin-top: 4px;
               }
             }
 
             .Skill_list {
-              
+
               display: flex;
               flex-wrap: wrap;
               gap: 20px 24px;
@@ -329,8 +400,7 @@ section .inner,
               gap: 20px;
 
               li {
-                strong {
-                }
+                strong {}
 
                 p {
                   line-height: 1.5;
@@ -380,8 +450,9 @@ section .inner,
                 a:hover {
                   @include btnHover();
                 }
-                
+
               }
+
               li:first-child {
                 a {
                   @include btnClicked();
@@ -503,14 +574,11 @@ section .inner,
           font-weight: 700;
         }
 
-        .name {
-        }
+        .name {}
 
-        .email {
-        }
+        .email {}
 
-        .phone {
-        }
+        .phone {}
       }
 
       small {
@@ -528,6 +596,7 @@ section .inner,
 }
 
 @media screen and (min-width: 861px) and (max-width: 1024px) {
+
   html,
   body {
     font-size: 16px;
@@ -550,17 +619,15 @@ section .inner,
       padding: 0 40px;
 
       .logo {
-        img {
-        }
+        img {}
       }
 
-      .gnb {
-        font-size: 16px;
+      .gnb.pc {
+        font-size: 18px;
         gap: 40px;
 
         li {
-          .menu {
-          }
+          .menu {}
         }
       }
     }
@@ -765,25 +832,19 @@ section .inner,
         address {
           font-size: 16px;
 
-          h3 {
-          }
+          h3 {}
 
-          .name {
-          }
+          .name {}
 
-          .email {
-          }
+          .email {}
 
-          .phone {
-          }
+          .phone {}
         }
 
         small {
-          p {
-          }
+          p {}
 
-          .copyright {
-          }
+          .copyright {}
         }
       }
     }
@@ -791,6 +852,7 @@ section .inner,
 }
 
 @media screen and (max-width: 860px) {
+
   html,
   body {
     font-size: 16px;
@@ -813,8 +875,7 @@ section .inner,
       padding: 0 20px;
 
       .logo {
-        img {
-        }
+        img {}
       }
 
       .gnb {
@@ -822,11 +883,15 @@ section .inner,
         gap: 40px;
 
         li {
-          .menu {
-          }
+          .menu {}
         }
       }
     }
+
+    .pc {
+      display: none;
+    }
+
   }
 
   #main {
@@ -964,7 +1029,7 @@ section .inner,
 
               .item-right {
                 width: 100%;
-                padding: 0 0 42px;
+                padding: 0 0 46px;
                 border: none;
                 border-radius: 0;
 
@@ -974,21 +1039,18 @@ section .inner,
                   border-radius: 16px;
                   gap: 10px;
 
-                  p {
-                  }
+                  p {}
                 }
 
                 .QR {
                   position: absolute;
                   top: 16px;
                   right: 16px;
-                  width: 78px;
+                  width: 75px;
 
                   min-width: unset;
 
-                  .QR_pc {
-                    
-                  }
+                  .QR_pc {}
 
                   .QR_mobile {
                     display: flex;
@@ -996,7 +1058,7 @@ section .inner,
                     padding: 0;
                     width: 100%;
                     height: 36px;
-                    border: 1px solid #222222; 
+                    border: 1px solid #222222;
                     border-radius: 8px;
                     cursor: pointer;
                     display: none;
@@ -1039,10 +1101,19 @@ section .inner,
       .inner {
         .contents {
           .lightbox-gallery {
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0;
+            row-gap: 16px;
+
+
 
             .item {
+              width: 48.3%;
+              height: auto;
+
+
             }
 
             .item:hover {
@@ -1075,14 +1146,11 @@ section .inner,
             margin-bottom: 4px;
           }
 
-          .name {
-          }
+          .name {}
 
-          .email {
-          }
+          .email {}
 
-          .phone {
-          }
+          .phone {}
         }
 
         small {
@@ -1098,3 +1166,94 @@ section .inner,
     }
   }
 }
+
+@media screen and (max-width: 390px) {
+
+  #main {
+
+
+    .contents {
+      .tab_list {
+        gap: 60px;
+
+        .item {
+          flex-direction: column;
+          padding: 0;
+          gap: 16px;
+
+          .item-right {
+            
+            width: 100%;
+            padding: 0 0 42px;
+            border: none;
+            border-radius: 0;
+
+            .project_info {
+              border: 1px solid #222222;
+              padding: 16px;
+              border-radius: 16px;
+              gap: 10px;
+
+              p {}
+            }
+
+            .QR {
+              
+            
+              position: absolute;
+              
+              top: 50%;
+              right: 0;
+              width: 75px;
+              height: 75px;
+
+              min-width: unset;
+
+              .QR_pc {}
+
+              .QR_mobile {
+                /* display: flex;
+                justify-content: center;
+                padding: 0;
+                width: 100%;
+                height: 36px;
+                border: 1px solid #222222;
+                border-radius: 8px;
+                cursor: pointer;
+                display: none; */
+
+/*                 .QR_btn {
+                  width: 20px;
+                  display: block;
+                } */
+              }
+            }
+
+            .link_wrap {
+              flex-wrap: nowrap;
+              row-gap: 0;
+              gap: 8px;
+              position: absolute;
+              bottom: 0;
+              justify-content: flex-start;
+
+              li {
+                width: auto;
+
+                a {
+                  padding: 2px 14px;
+                }
+
+                a:hover {
+                  @include btnHover();
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

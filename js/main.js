@@ -8,6 +8,15 @@ $(function () {
         }
     });//헤더 배경 나타나기
 
+    $('#header .inner .menu_btn').on('click', function () {
+        $('#header .nav.mobile').addClass('active');
+    });
+
+    $('#header .inner .nav.mobile .close_btn').on('click', function () {
+        $('#header .nav.mobile').removeClass('active');
+    });
+
+
 
     const $tabItems = $('.tab_menu li');
     const $tabButtons = $tabItems.find('button');
@@ -28,7 +37,7 @@ $(function () {
 
     const getHeaderH = () => $('#header').outerHeight() || 0;
 
-    $('#header .gnb').on('click', '.menu', function (e) {
+    $('#header .nav .gnb').on('click', '.menu', function (e) {
         e.preventDefault();
 
         const map = {
@@ -47,7 +56,7 @@ $(function () {
         $('html, body').stop(true).animate({ scrollTop: top }, 800);
     });//헤더 네비 스크롤
 
-    
+
     const $lightbox = $("<div class='lightbox' role='dialog' aria-modal='true' hidden></div>");
     const $img = $("<img alt=''>");
     const $caption = $("<p class='caption' aria-live='polite'></p>");
