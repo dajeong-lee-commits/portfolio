@@ -1291,9 +1291,10 @@ section .inner,
       }
     }
   }
+  
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 380px) {
   #main {
     .section {
       .inner {
@@ -1307,7 +1308,7 @@ section .inner,
               gap: 16px;
 
               .item-right {
-                padding: 0 0 91px;
+                padding: 0 0 75px;
 
                 .project_info {
                   margin-bottom: 16px;
@@ -1331,15 +1332,18 @@ section .inner,
               }
 
               .link_wrap {
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
+                width: 73%;
                 row-gap: 0;
                 gap: 8px;
                 position: absolute;
-                bottom: 0;
+                top: 89.7%;
+                transform: translate(0, -89.7%);
+                left: 0;
                 justify-content: flex-start;
 
                 li {
-                  width: auto;
+                  width: 48%;
 
                   a {
                     padding: 2px 14px;
@@ -1348,6 +1352,9 @@ section .inner,
                   a:hover {
                     @include btnHover();
                   }
+                }
+                li:first-child {
+                  width: 100%;
                 }
               }
             }
