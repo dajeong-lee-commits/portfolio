@@ -975,7 +975,7 @@ section .inner,
   font-size: 12px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 360px) {
   #main .section .inner .contents .tab_list {
     gap: 60px;
   }
