@@ -134,6 +134,9 @@ section .inner,
   min-height: 100vh;
   z-index: 0;
 }
+#main .section-01 .inner {
+  padding-bottom: 40px;
+}
 #main .section-01 .inner .section_title {
   margin-bottom: 80px;
 }
@@ -397,7 +400,8 @@ section .inner,
 #main .section-02 .bg {
   width: 100%;
   height: 60px;
-  background-color: transparent; /* 배경색을 반투명하게 설정 */
+  background-color: transparent;
+  /* 배경색을 반투명하게 설정 */
   position: sticky;
   top: 70px;
   z-index: 1;
@@ -410,7 +414,8 @@ section .inner,
   right: 999999px;
 }
 #main .section-02 .bg.active {
-  background-color: rgba(255, 255, 255, 0.3); /* 배경색을 반투명하게 설정 */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* 배경색을 반투명하게 설정 */
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -569,6 +574,9 @@ section .inner,
     font-size: 18px;
     gap: 40px;
   }
+  #main .section-01 .inner {
+    padding-bottom: 15px;
+  }
   #main .section-01 .inner .section_title {
     margin-bottom: 50px;
   }
@@ -621,7 +629,7 @@ section .inner,
   }
   #main .section .inner .tab_menu {
     gap: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
     top: 60px;
   }
   #main .section .inner .tab_menu li button {
@@ -696,6 +704,9 @@ section .inner,
   #main .section-02 .bg {
     top: 60px;
   }
+  #main .section-02 .inner .section_title {
+    margin-bottom: 16px;
+  }
   #main .section-03 .inner .contents .lightbox-gallery {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
@@ -748,6 +759,9 @@ section .inner,
   #header .pc {
     display: none;
   }
+  #main .section-01 .inner {
+    padding-bottom: 0px;
+  }
   #main .section-01 .inner .section_title {
     margin-bottom: 30px;
   }
@@ -782,10 +796,11 @@ section .inner,
   }
   #main .section-01 .inner .contents .list .item ul > li .date {
     width: 67px;
+    letter-spacing: -0.02em;
   }
   #main .section-01 .inner .contents .list .item ul > li p {
     max-width: 180px;
-    margin-left: 16px;
+    margin-left: 10px;
   }
   #main .section-01 .inner .contents .list .item .profile_list {
     text-align: center;
@@ -804,7 +819,7 @@ section .inner,
   #main .section .inner .tab_menu {
     width: 100%;
     gap: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     top: 60px;
   }
   #main .section .inner .tab_menu li button {
@@ -912,6 +927,9 @@ section .inner,
   #main .section-02 .bg {
     top: 60px;
   }
+  #main .section-02 .inner .section_title {
+    margin-bottom: 15px;
+  }
   #main .section-03 .inner .contents .lightbox-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -957,7 +975,7 @@ section .inner,
   font-size: 12px;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 375px) {
   #main .section .inner .contents .tab_list {
     gap: 60px;
   }
@@ -1003,6 +1021,18 @@ section .inner,
     transition: 0.3s;
   }
   #main .section .inner .contents .tab_list .item .link_wrap li:first-child {
+    width: 100%;
+  }
+  #main .section .inner .contents .tab_list .item .link_wrap.type2 li {
+    width: 100%;
+  }
+  #main .section .inner .contents .tab_list .item .link_wrap.type3 {
+    width: 100%;
+  }
+  #main .section .inner .contents .tab_list .item .link_wrap.type3 li {
+    width: 100%;
+  }
+  #main .section .inner .contents .tab_list .item .link_wrap.type4 {
     width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
