@@ -38,7 +38,7 @@ $(function () {
 
         // 🔥 탭 클릭 시 section-02 맨 위로 스크롤 (헤더 높이만큼 보정)
         const sectionTop = $('.section-02').offset().top - getHeaderH();
-        $('html, body').stop(true).animate({ scrollTop: sectionTop }, 500);
+        $('html, body').stop(true).animate({ scrollTop: sectionTop }, 100);
     });
 
     const $tabMenu = $('.section-02 .tab_menu');
@@ -81,7 +81,7 @@ $(function () {
         const map = {
             'menu-01': '.main_visual',
             'menu-02': '.section-01',
-            'menu-03': '.section-02',
+            'menu-03': '.section-02 .inner',
             'menu-04': '.section-03',
             'menu-05': '#footer'
         };

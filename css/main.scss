@@ -91,8 +91,7 @@ section .inner,
       a {
         img {
           display: block;
-          filter: brightness(0) saturate(100%) invert(9%) sepia(3%) saturate(16%) hue-rotate(332deg) brightness(95%)
-            contrast(89%);
+          filter: brightness(0) saturate(100%) invert(9%) sepia(3%) saturate(16%) hue-rotate(332deg) brightness(95%) contrast(89%);
         }
       }
     }
@@ -141,8 +140,7 @@ section .inner,
         right: 16px;
         padding: 0;
 
-        img {
-        }
+        img {}
       }
 
       .gnb.mobile {
@@ -192,8 +190,7 @@ section .inner,
 
     .menu_btn {
       img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(39%) hue-rotate(320deg) brightness(118%)
-          contrast(100%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(4%) saturate(39%) hue-rotate(320deg) brightness(118%) contrast(100%);
       }
     }
   }
@@ -206,6 +203,7 @@ section .inner,
 
   .section-01 {
     .inner {
+      padding-bottom: 40px;
       .section_title {
         margin-bottom: 80px;
       }
@@ -243,7 +241,7 @@ section .inner,
             }
 
             ul {
-              > li {
+              >li {
                 display: flex;
                 font-size: 18px;
                 margin-top: 4px;
@@ -427,8 +425,7 @@ section .inner,
               gap: 20px;
 
               li {
-                strong {
-                }
+                strong {}
 
                 p {
                   line-height: 1.5;
@@ -491,25 +488,33 @@ section .inner,
       }
     }
   }
+
   .section-02 {
     position: relative;
+
     .bg {
       width: 100%;
       height: 60px;
-      background-color: transparent;/* 배경색을 반투명하게 설정 */
+      background-color: transparent;
+      /* 배경색을 반투명하게 설정 */
       position: sticky;
       top: 70px;
       z-index: 1;
       backdrop-filter: none;
       transition: 0.3s ease-in-out;
-      span{
+
+
+      span {
         position: absolute;
         right: 999999px;
       }
     }
+
     .bg.active {
-      background-color: rgba(255, 255, 255, 0.3); /* 배경색을 반투명하게 설정 */
+      background-color: rgba(255, 255, 255, 0.3);
+      /* 배경색을 반투명하게 설정 */
       backdrop-filter: blur(10px);
+
     }
 
     .inner {
@@ -534,13 +539,14 @@ section .inner,
             height: 282px;
             position: relative;
 
-            > img {
+            >img {
               width: 100%;
               height: 100%;
               object-fit: cover;
               display: block;
               transition: transform 0.3s ease-in-out;
             }
+
             .tool {
               position: absolute;
               top: 12px;
@@ -557,7 +563,7 @@ section .inner,
             }
           }
 
-          .item:hover > img {
+          .item:hover>img {
             transform: scale(1.1);
           }
         }
@@ -641,14 +647,11 @@ section .inner,
           font-weight: 700;
         }
 
-        .name {
-        }
+        .name {}
 
-        .email {
-        }
+        .email {}
 
-        .phone {
-        }
+        .phone {}
 
         .PDF {
           margin-top: 20px;
@@ -681,6 +684,7 @@ section .inner,
 }
 
 @media screen and (min-width: 861px) and (max-width: 1024px) {
+
   html,
   body {
     font-size: 16px;
@@ -703,8 +707,7 @@ section .inner,
       padding: 0 40px;
 
       .logo {
-        img {
-        }
+        img {}
       }
 
       .gnb.pc {
@@ -712,8 +715,7 @@ section .inner,
         gap: 40px;
 
         li {
-          .menu {
-          }
+          .menu {}
         }
       }
     }
@@ -722,6 +724,7 @@ section .inner,
   #main {
     .section-01 {
       .inner {
+        padding-bottom: 15px;
         .section_title {
           margin-bottom: 50px;
         }
@@ -790,7 +793,7 @@ section .inner,
       .inner {
         .tab_menu {
           gap: 8px;
-          margin-bottom: 30px;
+          margin-bottom: 16px;
           top: 60px;
 
           li {
@@ -883,9 +886,15 @@ section .inner,
         }
       }
     }
+
     .section-02 {
       .bg {
         top: 60px;
+      }
+      .inner {
+        .section_title {
+          margin-bottom: 16px;
+        }
       }
     }
 
@@ -927,25 +936,19 @@ section .inner,
         address {
           font-size: 16px;
 
-          h3 {
-          }
+          h3 {}
 
-          .name {
-          }
+          .name {}
 
-          .email {
-          }
+          .email {}
 
-          .phone {
-          }
+          .phone {}
         }
 
         small {
-          p {
-          }
+          p {}
 
-          .copyright {
-          }
+          .copyright {}
         }
       }
     }
@@ -953,6 +956,7 @@ section .inner,
 }
 
 @media screen and (max-width: 860px) {
+
   html,
   body {
     font-size: 16px;
@@ -975,8 +979,7 @@ section .inner,
       padding: 0 20px;
 
       .logo {
-        img {
-        }
+        img {}
       }
 
       .gnb {
@@ -984,8 +987,7 @@ section .inner,
         gap: 40px;
 
         li {
-          .menu {
-          }
+          .menu {}
         }
       }
 
@@ -1002,6 +1004,7 @@ section .inner,
   #main {
     .section-01 {
       .inner {
+        padding-bottom: 0px;
         .section_title {
           margin-bottom: 30px;
         }
@@ -1034,23 +1037,26 @@ section .inner,
               }
 
               ul {
-                > li {
+                >li {
                   font-size: 16px;
                   margin-top: 4px;
 
                   .date {
                     width: 67px;
+                    letter-spacing: -0.02em;
+                    
                   }
 
                   p {
                     max-width: 180px;
-                    margin-left: 16px;
+                    margin-left: 10px;
                   }
                 }
               }
 
               .profile_list {
                 text-align: center;
+
                 li {
                   display: block;
                 }
@@ -1076,7 +1082,7 @@ section .inner,
         .tab_menu {
           width: 100%;
           gap: 8px;
-          margin-bottom: 30px;
+          margin-bottom: 15px;
           top: 60px;
 
           li {
@@ -1151,8 +1157,7 @@ section .inner,
                   border-radius: 16px;
                   gap: 10px;
 
-                  p {
-                  }
+                  p {}
                 }
 
                 .QR {
@@ -1163,8 +1168,7 @@ section .inner,
 
                   min-width: unset;
 
-                  .QR_pc {
-                  }
+                  .QR_pc {}
 
                   /* .QR_mobile {
                     display: flex;
@@ -1209,9 +1213,15 @@ section .inner,
         }
       }
     }
+
     .section-02 {
       .bg {
         top: 60px;
+      }
+      .inner {
+        .section_title {
+          margin-bottom: 15px;
+        }
       }
     }
 
@@ -1229,11 +1239,13 @@ section .inner,
               width: 48.3%;
               height: auto;
               aspect-ratio: 1/1;
+
               .tool {
                 top: 8px;
                 right: 8px;
                 gap: 8px;
-                > img {
+
+                >img {
                   border-radius: 10px;
                 }
               }
@@ -1270,14 +1282,11 @@ section .inner,
           margin-bottom: 4px;
         }
 
-        .name {
-        }
+        .name {}
 
-        .email {
-        }
+        .email {}
 
-        .phone {
-        }
+        .phone {}
       }
 
       small {
@@ -1291,9 +1300,10 @@ section .inner,
       }
     }
   }
+
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 360px) {
   #main {
     .section {
       .inner {
@@ -1307,13 +1317,12 @@ section .inner,
               gap: 16px;
 
               .item-right {
-                padding: 0 0 91px;
+                padding: 0 0 75px;
 
                 .project_info {
                   margin-bottom: 16px;
 
-                  p {
-                  }
+                  p {}
                 }
 
                 .QR {
@@ -1325,21 +1334,23 @@ section .inner,
 
                   min-width: unset;
 
-                  .QR_pc {
-                  }
+                  .QR_pc {}
                 }
               }
 
               .link_wrap {
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
+                width: 73%;
                 row-gap: 0;
                 gap: 8px;
                 position: absolute;
-                bottom: 0;
+                top: 89.7%;
+                transform: translate(0, -89.7%);
+                left: 0;
                 justify-content: flex-start;
 
                 li {
-                  width: auto;
+                  width: 48%;
 
                   a {
                     padding: 2px 14px;
@@ -1349,6 +1360,26 @@ section .inner,
                     @include btnHover();
                   }
                 }
+
+                li:first-child {
+                  width: 100%;
+                }
+              }
+
+              .link_wrap.type2 {
+                li {
+                  width: 100%;
+                }
+              }
+
+              .link_wrap.type3 {
+                width: 100%;
+                li {
+                  width: 100%;
+                }
+              }
+              .link_wrap.type4 {
+                width: 100%;
               }
             }
           }
